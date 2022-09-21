@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Employee Profile</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 20%;
+  height: 400px;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+detail {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, detail {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Employee Profile</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Attendance</a></li><br>
+        <li><a href="/editot">Check Employee Salary</a></li>
+
+      <li><button type="submit" formaction="/getemp" style="background: grey; height: 45px; width: 200px; color:white; font:oblique;"  >GET EMPLOYEE INFORMATION</button></li>
+
+    </ul>
+  </nav>
+
+  <detail>
+    <h2>Please enter employee details</h2>
+
+<form action="/addemp" autocomplete="on" method = "POST" enctype="multipart/form-data">
+
+				
+		  		Employee ID: <input style="height:25px;font-size:14pt; color:grey;" type="number" name="emp_id" autofocus size="40"><br><br>
+
+		  		First Name: &nbsp&nbsp&nbsp<input style="height:25px;font-size:14pt;color:grey;" type="text" name="first_name" ><br><br>
+
+		  		Last Name: &nbsp&nbsp&nbsp<input style="height:25px;font-size:14pt;color:grey;" type="text" name="last_name"><br><br>
+
+		  		Department: &nbsp&nbsp<input style="height:25px;font-size:14pt;color:grey;" type="text" name="department"><br><br>
+
+		  		Address: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input style="height:25px;font-size:14pt;color:grey;" type="text" name="address"><br><br>
+
+		  		Profile Image: <input type=file name="emp_image_file" style="height:25px;font-size:14pt;color:grey;"> </br></br>
+
+		  		<button type="submit" style="background: grey; height: 45px; width: 100px; color: white; size: 5; font:oblique;">UPDATE</button></br></br>
+</form>
+  </detail>
+
+</section>
+
+<footer>
+  <a href="AboutUs.html">About Us</a>
+</footer>
+
+</body>
+</html>
